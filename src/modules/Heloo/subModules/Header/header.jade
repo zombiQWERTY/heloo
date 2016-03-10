@@ -1,0 +1,34 @@
+header.header
+  .menu(ng-if="!$root.breakpoint")
+    ul
+      li
+        a(href="#") Главная
+      li
+        a(href="#") О Heloo
+      li
+        a(href="#") Для бизнеса
+      li
+        a(href="#") О нас
+      li
+        a(href="#") Пресса
+      li
+        a(href="#") Контакты
+      li
+        a.menu__cabinet(href="#") Личный кабинет
+  .menu_mobile(ng-if="$root.breakpoint")
+    .menu_mobile__sandwich(ng-init="openMenu = false", ng-click="openMenu = !openMenu")
+    ul(ng-if="openMenu")
+      li.menu_mobile__active
+        a(href="#") Главная
+      li
+        a(href="#") О Heloo
+      li
+        a(href="#") Для бизнеса
+      li
+        a(href="#") О нас
+      li
+        a(href="#") Пресса
+      li
+        a(href="#") Контакты
+      li
+        a(href="#") Личный кабинет
