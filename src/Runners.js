@@ -6,6 +6,7 @@
  * @param {Object} $state - Provides interfaces to current state.
  */
 const Runners = ($rootScope, $state) => {  /*@ngInject*/
+  "ngInject";
 
   /**
    * Waiting route change start event.

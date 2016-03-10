@@ -10,7 +10,7 @@ const PointerEvents = $timeout => {
   return {
     restrict: 'A',
     link(scope, $element) {
-      "@ngInject";
+      "ngInject";
 
       let timeout;
       window.addEventListener('scroll', () => {

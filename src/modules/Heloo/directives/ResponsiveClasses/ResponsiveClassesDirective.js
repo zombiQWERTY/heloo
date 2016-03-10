@@ -8,7 +8,7 @@ import angular                 from 'angular';
  * @param {Object} $window - window object.
  */
 const ResponsiveClasses = ($rootScope, $window) => {
-  "@ngInject";
+  "ngInject";
 
   /**
    * All values are in pixels.
