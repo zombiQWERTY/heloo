@@ -7,10 +7,11 @@ import angular from 'angular';
  * @param {Object} $timeout - Timeout provider.
  */
 const PointerEvents = $timeout => {
+  "ngInject";
+
   return {
     restrict: 'A',
     link(scope, $element) {
-      "ngInject";
 
       let timeout;
       window.addEventListener('scroll', () => {
