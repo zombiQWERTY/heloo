@@ -1,0 +1,10 @@
+.block.block_about_personal
+  .block_centered
+    h1 Наша команда
+    .personal
+      .personal__line(ng-repeat="line in [1,2,3]")
+        .personal__item(ng-repeat="person in [1,2,3,4]")
+          .personal__item__icon
+            img(src="/personal/personal.png")
+          .personal__item__name Имя
+          .personal__item__post Должность

@@ -1,0 +1,166 @@
+@import "../../../stylesheets/mixins.scss";
+@import "../../../stylesheets/variables.scss";
+
+.block_press_intro_about {
+  background: url(./images/press_bg.png) no-repeat center top;
+  background-size: cover;
+  min-height: 600px;
+
+  @mixin mobile {
+    background: url(./images/press_bg_mobile.png) no-repeat center top;
+    min-height: 1043px;
+  }
+}
+
+.features_list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -50px;
+
+  &__item {
+    text-align: center;
+
+    &__icon {
+      display: inline-block;
+      margin-bottom: 20px;
+      size: 100px 101px;
+
+      &_man {
+        background: url(./images/icons/man.png) no-repeat center;
+      }
+
+      &_mouthpiece {
+        background: url(./images/icons/mouthpiece.png) no-repeat center;
+      }
+
+      &_stat {
+        background: url(./images/icons/stat.png) no-repeat center;
+      }
+
+      &_usd {
+        background: url(./images/icons/usd.png) no-repeat center;
+      }
+
+      &_tie {
+        background: url(./images/icons/tie.png) no-repeat center;
+      }
+
+      &_bicycle {
+        background: url(./images/icons/bicycle.png) no-repeat center;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      color: $austronaut;
+      margin-bottom: 20px;
+    }
+
+    &__descr {
+      font-size: 14px;
+      color: $bismark;
+    }
+  }
+}
+
+.business__mockup {
+  background: url(./images/mockup.png) no-repeat center top;
+  margin-top: 85px;
+  padding-top: 374px;
+}
+
+.how-to-partner__steps {
+  width: 800px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+.how-to-partner__step {
+  color: $celestialBlue;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+
+  &:not(:last-child) {
+    &::after {
+      content: ">";
+      margin: 0 20px;
+      color: $veniceBlue;
+      right: -20px;
+    }
+  }
+
+  span {
+    cursor: pointer;
+  }
+
+  &_active {
+    color: $veniceBlue;
+    span {
+      border-bottom: 2px solid $austronaut;
+      display: inline-block;
+      padding-bottom: 20px;
+      cursor: default;
+    }
+  }
+}
+
+.how-to-partner__wrapper {
+  background: $alabaster;
+  padding-top: 65px;
+  padding-bottom: 60px;
+  min-height: 460px;
+
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    color: $veniceBlue;
+    margin-bottom: 80px;
+  }
+}
+
+.how-to-partner__slides {
+  text-align: center;
+}
+
+.how-to-partner__slide {
+  position: relative;
+  width: 930px;
+  margin: 0 auto;
+
+  &1__title {
+    position: absolute;
+  }
+
+  &1__title_1 {
+    left: 60px;
+    bottom: 0;
+  }
+
+  &1__title_2 {
+    left: 370px;
+    bottom: -80px;
+  }
+
+  &1__title_3 {
+    left: 625px;
+    bottom: -40px;
+  }
+}
+
+.how-to-partner__arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 150px;
+  size: 34px 24px;
+
+  &_prev {
+    background: url(./images/arrows/prev.png) no-repeat center;
+    left: 0;
+  }
+
+  &_next {
+    background: url(./images/arrows/next.png) no-repeat center;
+    right: 0;
+  }
+}

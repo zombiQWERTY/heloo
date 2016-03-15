@@ -29,6 +29,30 @@ const Config = (stateHelperProvider, $urlRouterProvider, $locationProvider, $log
       name: 'home',
       controller: 'HomeController',
       template: require('./modules/Home/views/home.jade')()
+    })
+    .state({
+      url: '/press',
+      name: 'press',
+      controller: 'PressController',
+      template: require('./modules/Press/views/press.jade')()
+    })
+    .state({
+      url: '/about',
+      name: 'about',
+      controller: 'AboutController',
+      template: require('./modules/About/views/about.jade')()
+    })
+    .state({
+      url: '/business',
+      name: 'business',
+      controller: 'BusinessController',
+      template: require('./modules/Business/views/business.jade')()
+    })
+    .state({
+      url: '/contacts',
+      name: 'contacts',
+      controller: 'ContactsController',
+      template: require('./modules/Contacts/views/contacts.jade')()
     });
 };
 

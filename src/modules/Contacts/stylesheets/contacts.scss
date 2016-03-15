@@ -1,0 +1,131 @@
+@import "../../../stylesheets/mixins.scss";
+@import "../../../stylesheets/variables.scss";
+
+.block_contacts-intro {
+  background: url(./images/intro_bg.png) no-repeat center top;
+  background-size: 100% 400px;
+  min-height: 944px;
+
+  @mixin mobile {
+    background: url(./images/intro_bg_mobile.png) no-repeat center top;
+    background-size: 100% 1000px;
+    min-height: 1000px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: $white;
+    padding-top: 160px;
+
+    @mixin mobile {
+      padding-top: 300px;
+      font-size: 36px;
+    }
+  }
+
+  &__form {
+    margin-top: 300px;
+
+    @mixin mobile {
+      margin-top: 35px;
+    }
+
+    &_desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__fields {
+        width: 530px;
+
+        @mixin mobile {
+          width: 100%;
+        }
+
+        p {
+          text-align: center;
+          margin-bottom: 45px;
+
+          @mixin mobile {
+            color: $white;
+            font-size: 24px;
+          }
+        }
+
+        input[type="text"] {
+          padding: 0 15px;
+          margin-bottom: 15px;
+          size: 46.5% 45px;
+
+          @mixin mobile {
+            height: 70px;
+            margin-bottom: 20px;
+          }
+
+          &:first-child {
+            margin-right: 7%;
+          }
+        }
+
+        textarea {
+          padding: 15px;
+          size: 530px 130px;
+
+          @mixin mobile {
+            height: 210px;
+            margin-bottom: 68px;
+          }
+        }
+
+        input[type="text"], textarea {
+          border: 1px solid $gainsboro;
+
+          @mixin mobile {
+            width: 600px;
+            margin-left: 20px;
+            font-size: 24px;
+          }
+
+          &::placeholder {
+            color: $darkGray;
+          }
+        }
+
+        input[type="submit"] {
+          background: $austronaut;
+          text-transform: uppercase;
+          border-radius: 5px;
+          padding: 13px 24px;
+          color: $white;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          margin-top: 15px;
+
+          @mixin mobile {
+            font-size: 30px;
+            background: $trueBlue;
+            padding: 15px 70px;
+          }
+        }
+      }
+
+      &__address {
+        width: 320px;
+
+        @mixin mobile {
+          height: 457px;
+          padding-top: 120px;
+          text-align: center;
+          font-size: 30px;
+          width: 100%;
+        }
+
+        li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}

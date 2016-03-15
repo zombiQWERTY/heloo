@@ -2,10 +2,14 @@
  * Javascripts
  * ========================================================================== */
 
-import angular from 'angular';
+import angular  from 'angular';
 
-import Layout  from './Index';
-import Home    from '../Home/Index';
+import Layout   from './Index';
+import Home     from '../Home/Index';
+import Contacts from '../Contacts/Index';
+import Press    from '../Press/Index';
+import About    from '../About/Index';
+import Business from '../Business/Index';
 
 /**
  * Define app module.
@@ -14,5 +18,5 @@ import Home    from '../Home/Index';
  * @export Controllers module
  */
 export default angular.module('Heloo.App.controllers', [
-  Layout, Home
+  Layout, Home, Contacts, Press, About, Business
 ]).name;

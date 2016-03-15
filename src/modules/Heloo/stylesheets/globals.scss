@@ -1,7 +1,23 @@
+@import "../../../stylesheets/mixins.scss";
+
 .no-hover {
   pointer-events: none;
 }
 
 .no-scroll {
   overflow: hidden;
+}
+
+.br_desktop {
+  @mixin mobile {
+    display: none;
+  }
+}
+
+.br_mobile {
+  display: none;
+
+  @mixin mobile {
+    display: block;
+  }
 }

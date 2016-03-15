@@ -1,0 +1,18 @@
+.block.block_intro(ng-if="!$root.breakpoint")
+  .block_centered
+    include ../.././../Heloo/subModules/Header/header.jade
+    .block_intro__content
+      h1.block_intro__heading_1 Скажи Heloo возможностям!
+      h2.block_intro__heading_2 Они ближе, чем ты думаешь
+      .mobile-apps.mobile-apps_centered
+        a(href="#")
+          img(src="/apps/android.png")
+        a(href="#")
+          img(src="/apps/ios.png")
+      .block_intro__mockup
+        img(src="/home/mockup.png")
+      .block__descr.block__descr_large
+        p.
+          Приложение, позволяющее находить интересных людей и места,<br />
+          а также общаться,чекиниться, оставлять отзывы и быть в курсе актуальных событий.<br />
+          Включите Bluetooth и будьте в курсе всего самого интересного вокруг!

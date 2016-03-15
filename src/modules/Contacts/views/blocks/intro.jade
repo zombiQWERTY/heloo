@@ -1,0 +1,24 @@
+.block.block_contacts-intro
+  .block_centered
+    include ../.././../Heloo/subModules/Header/header.jade
+    h1 Свяжитесь с нами
+    .block_contacts-intro__form(
+      ng-class="{'block_contacts-intro__form_desktop': !$root.breakpoint}")
+
+      .block_contacts-intro__form__fields.block_contacts-intro__form_desktop__fields
+        p.
+          Если у Вас есть идея, жалоба или предложение,<br />
+          Вы можете заполнить форму ниже<br />
+          и мы непременно с Вами свяжемся
+        form
+          input(type="text", placeholder="Ваше имя")
+          input(type="text", placeholder="Ваш e-mail")
+          textarea(placeholder="Сообщение")
+          input(type="submit", valus="Отправить")
+      .block_contacts-intro__form__address.block_contacts-intro__form_desktop__address
+        ul
+          li Torstrasse 43 (10119) Berlin, Germany
+          li WhatsApp: +49 1573 1415388
+          li Viber: +7 967 562 20 32
+          li Skype: HelooApp
+          li info@heloo.me

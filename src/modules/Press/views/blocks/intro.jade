@@ -1,0 +1,12 @@
+.block.block_press_intro
+  .block_centered
+    include ../.././../Heloo/subModules/Header/header.jade
+    .block_press_intro__title
+      h1 Пресса
+      p.
+        Не стесняйтесь использовать наши<br class="br_mobile" /> медиа-ресурсы<br class="br_desktop" />
+        и рассказывать о нас<br class="br_mobile" /> своим друзьям!<br class="br_desktop" />
+        Мы благодарны Вам<br class="br_mobile" /> за любой фидбек!
+    .block_press_intro__downloads(ng-if="$root.breakpoint")
+      a.block_press_intro__downloads__link(href="#") Скачать медиа-ресурсы
+      a.block_press_intro__downloads__link(href="#") Пресс-релизы

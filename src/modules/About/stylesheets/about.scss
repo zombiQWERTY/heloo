@@ -1,0 +1,76 @@
+@import "../../../stylesheets/mixins.scss";
+@import "../../../stylesheets/variables.scss";
+
+.block_press_intro_about {
+  background: url(./images/intro_bg.png) no-repeat center top;
+  background-size: cover;
+  min-height: 601px;
+
+  @mixin mobile {
+    background: url(./images/intro_bg_mobile.png) no-repeat center top;
+    min-height: 650px;
+  }
+}
+
+.block_about_personal {
+  padding-top: 70px;
+
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 80px;
+  }
+}
+
+.personal {
+  &__line {
+    margin-bottom: 40px;
+
+    @mixin mobile {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:not(:nth-child(4n)) {
+      margin-right: 200px;
+    }
+
+    @mixin mobile {
+      width: 160px;
+      margin: 0 80px;
+      margin-bottom: 70px;
+
+      &:not(:nth-child(4n)) {
+        margin-right: 80px;
+      }
+    }
+
+    &__icon {
+      margin-bottom: 20px;
+      display: inline-block;
+      text-align: center;
+      size: 100px;
+
+      img {
+        size: 100px;
+      }
+    }
+
+    &__name {
+      font-size: 18px;
+      color: $austronaut;
+    }
+
+    &__post {
+      font-size: 17px;
+      color: $suvaGray;
+    }
+  }
+}

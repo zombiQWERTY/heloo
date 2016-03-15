@@ -43,6 +43,7 @@ body {
 .block_centered {
   width: $content-width;
   margin: 0 auto;
+  position: relative;
 
   @mixin mobile {
     width: $content-width-mobile;

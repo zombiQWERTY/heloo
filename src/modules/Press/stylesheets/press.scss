@@ -1,0 +1,185 @@
+@import "../../../stylesheets/mixins.scss";
+@import "../../../stylesheets/variables.scss";
+
+.block_press_intro {
+  background: url(./images/press_bg.png) no-repeat center top;
+  background-size: cover;
+  min-height: 600px;
+
+  @mixin mobile {
+    background: url(./images/press_bg_mobile.png) no-repeat center top;
+    min-height: 1043px;
+  }
+
+  &__downloads {
+    margin-top: 90px;
+
+    &__link {
+      background: $white;
+      border-radius: 5px;
+      display: block;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      text-transform: uppercase;
+      color: $darkCerulean;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.block_press_intro__title {
+  padding-top: 185px;
+  color: $white;
+
+  @mixin mobile {
+    padding-top: 310px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 40px;
+
+    @mixin mobile {
+      font-size: 36px;
+    }
+  }
+
+  p {
+    font-size: 16px;
+
+    @mixin mobile {
+      font-size: 30px;
+      line-height: 1.25;
+    }
+  }
+}
+
+.block_press_downloads {
+  min-height: 450px;
+  padding-top: 100px;
+}
+
+.downloads {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 0 auto;
+
+  &__item {
+    width: 240px;
+    text-align: center;
+
+    &__icon {
+      size: 140px;
+      border-radius: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      &_media {
+        background: url(./images/downloads/media.png) no-repeat center;
+      }
+
+      &_press {
+        background: url(./images/downloads/press.png) no-repeat center;
+      }
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    &__link {
+      background: $austronaut;
+      text-transform: uppercase;
+      border-radius: 5px;
+      padding: 13px 24px;
+      color: $white;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+    }
+  }
+}
+
+.block_press_feedback {
+  background: $antiFlashWhite;
+  padding-top: 80px;
+
+  @mixin mobile {
+    background: none;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $gallery;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+    text-align: center;
+
+    @mixin mobile {
+      margin-bottom: 70px;
+      color: $darkCerulean;
+      font-size: 30px;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  &__form {
+    width: 360px;
+    margin: 0 auto;
+
+    input[type="text"] {
+      padding: 0 24px;
+      margin-bottom: 12px;
+      height: 60px;
+    }
+
+    textarea {
+      padding: 24px;
+      height: 180px;
+    }
+
+    input[type="text"], textarea {
+      border: 1px solid $mercury;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+
+      &::placeholder {
+        color: $darkGray;
+      }
+    }
+
+    input[type="submit"] {
+      background: $austronaut;
+      text-transform: uppercase;
+      border-radius: 5px;
+      padding: 13px 24px;
+      color: $white;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+      bottom: -20px;
+      position: relative;
+
+      @mixin mobile {
+        font-size: 25px;
+        padding: 15px 55px;
+        bottom: 0;
+      }
+    }
+  }
+}
