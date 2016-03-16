@@ -72,6 +72,7 @@
 .block__descr {
   text-align: center;
   color: $tundora;
+  position: relative;
 
   @mixin mobile {
     font-size: 24px;
@@ -361,4 +362,9 @@
   &__heading_2 {
     font-size: 24px;
   }
+}
+
+.aboutHeloo {
+  position: absolute;
+  top: -60px;
 }

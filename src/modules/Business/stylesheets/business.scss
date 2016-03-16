@@ -167,6 +167,7 @@
 
 .block_business_together {
   padding-top: 30px;
+  padding-bottom: 80px;
 
   &__heading {
     padding-top: 50px;
@@ -230,3 +231,115 @@
   }
 }
 
+.block_tariffs {
+  padding-top: 35px;
+  padding-bottom: 70px;
+  background: $alabaster;
+}
+
+.pricetable {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 70px;
+
+  &__features {
+    font-size: 14px;
+    width: 500px;
+    color: $stormDust;
+
+    &__line {
+      position: relative;
+      border-bottom: 1px solid $athensGray;
+      line-height: 33px;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      &__button {
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        color: $white;
+        padding: 10px;
+        line-height: 0.6;
+        background-color: $bleuDeFrance;
+        border-radius: 3px;
+        margin-top: 2px;
+      }
+    }
+  }
+
+  &__table {
+    display: flex;
+    background-color: $richElectricBlue;
+    border-radius: 5px;
+    size: 566px 390px;
+
+    &__row {
+      padding-top: 35px;
+      border: 2px solid transparent;
+      width: 50%;
+      text-align: center;
+
+      &__descr {
+        margin-bottom: 2px;
+        margin-top: 5px;
+
+        .pricetable__table__row_paid & {
+          margin-bottom: 4px;
+        }
+      }
+
+      &_free {
+        border-color: $moutainMist;
+        border-radius: 5px;
+        background-color: $white;
+
+        .pricetable__table__row__title {
+          font-size: 18px;
+          color: $moutainMist;
+        }
+      }
+
+      &_paid {
+        color: $white;
+        border-left: 0;
+
+        .pricetable__table__row__line_exists {
+          background: url(./images/existsLight.png) no-repeat center;
+        }
+
+        .pricetable__table__row__line {
+          border-bottom: 1px solid $curiusBlue !important;
+        }
+      }
+
+      &__line {
+        position: relative;
+        border-bottom: 1px solid $athensGray;
+        height: 33px;
+
+        &_exists {
+          background: url(./images/exists.png) no-repeat center;
+        }
+
+        &_nonexists {
+          background: url(./images/nonexists.png) no-repeat center;
+        }
+
+        &:last-child {
+          border-bottom: 0 !important;
+        }
+      }
+    }
+  }
+
+
+  &__button {
+    position: relative;
+    bottom: -40px;
+    width: 80%;
+  }
+}
