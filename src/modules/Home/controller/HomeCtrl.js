@@ -5,11 +5,8 @@
 export default class HomeController {
   /**
    * @constructor
-   * @param {object} $scope - Local (in this controller) application model.
    */
-  constructor($scope) {
+  constructor() {
     "ngInject";
-
-    this.$scope = $scope;
   }
 }

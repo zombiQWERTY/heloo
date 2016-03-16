@@ -4,10 +4,9 @@ import angular                 from 'angular';
  * Set responsive classes to .wrapper on resize for
  * declining media queries.
  * @module ResponsiveClasses
- * @param {Object} $rootScope - Global scope.
  * @param {Object} $window - window object.
  */
-const ResponsiveClasses = ($rootScope, $window) => {
+const ResponsiveClasses = ($window) => {
   "ngInject";
 
   /**
