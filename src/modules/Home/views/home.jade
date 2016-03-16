@@ -1,10 +1,10 @@
 .page-content.page_home
   include ./blocks/intro.jade
 
-  div(ng-if="!$root.breakpoint")
+  div(ng-if="!breakpoint")
     include ./blocks/benefits.jade
 
-  .block.block_mobile.block_mobile_intro(ng-if="$root.breakpoint")
+  .block.block_mobile.block_mobile_intro(ng-if="breakpoint")
     include ../../Heloo/subModules/Header/header.jade
     div.block_mobile_intro__offset
     a(href="#")

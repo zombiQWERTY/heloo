@@ -1,7 +1,7 @@
 .header_replace
 header.header(sticky="")
   .block_centered
-    .menu(ng-if="!$root.breakpoint")
+    .menu(ng-if="!breakpoint")
       ul
         li
           a(href="/", ng-class="Heloo.getClass('/')") Главная
@@ -17,7 +17,7 @@ header.header(sticky="")
           a(href="/contacts", ng-class="Heloo.getClass('/contacts')") Контакты
         li
           a.menu__cabinet(href="#") Личный кабинет
-    .menu_mobile(ng-if="$root.breakpoint")
+    .menu_mobile(ng-if="breakpoint")
       .menu_mobile__sandwich(ng-init="openMenu = false", ng-click="openMenu = !openMenu")
       ul(ng-if="openMenu")
         li.menu_mobile__active

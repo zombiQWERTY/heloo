@@ -1,9 +1,9 @@
 .block.block_press_feedback
   .block_centered
-    .block_press_feedback__title(ng-if="!$root.breakpoint")
+    .block_press_feedback__title(ng-if="!breakpoint")
       h1 Есть вопросы, идеи или предложения?
       p Отправьте их напрямую!
-    .block_press_feedback__title(ng-if="$root.breakpoint") Есть идеи, жалобы или предложения?
+    .block_press_feedback__title(ng-if="breakpoint") Есть идеи, жалобы или предложения?
     .block_press_feedback__form
       form
         input(type="text", placeholder="Ваш e-mail")

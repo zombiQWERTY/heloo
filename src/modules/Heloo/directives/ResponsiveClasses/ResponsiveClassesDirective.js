@@ -22,7 +22,7 @@ const ResponsiveClasses = ($rootScope, $window) => {
 
   return {
     restrict: 'A',
-    link() {
+    link(scope) {
       let width, breakpoint, conditions;
 
       const rules = event => {  /** Auto call on init */
@@ -34,15 +34,15 @@ const ResponsiveClasses = ($rootScope, $window) => {
 
         if (conditions.small) {
           breakpoint = names[0];  /** small */
-          $rootScope.breakpoint = `wrapper_${breakpoint}`;
+          scope.breakpoint = `wrapper_${breakpoint}`;
         }
 
         if (!conditions.small) {
-          $rootScope.breakpoint = '';
+          scope.breakpoint = '';
         }
 
         if (event) {
-          $rootScope.$apply();
+          scope.$apply();
         }
       };
 

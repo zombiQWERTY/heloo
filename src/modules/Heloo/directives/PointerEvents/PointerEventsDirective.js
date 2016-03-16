@@ -11,19 +11,16 @@ const PointerEvents = $timeout => {
 
   return {
     restrict: 'A',
-    link(scope, $element) {
-
+    link(scope) {
       let timeout;
       window.addEventListener('scroll', () => {
         $timeout.cancel(timeout);
-
-        if(!$element[0].classList.contains('no-hover')) {
-          $element[0].classList.add('no-hover');
+        if (!scope.noHover) {
+          scope.noHover = 'no-hover';
+          return;
         }
-
-        if($element[0].classList.contains('no-hover')) {
-          timeout = $timeout(() => $element[0].classList.remove('no-hover'), 500);  /** Enable it every 500ms */
-        }
+        timeout = $timeout(() => scope.noHover = '', 500);  /** Enable it every 500ms */
+        scope.$apply();
       });
     }
   };
@@ -33,6 +30,6 @@ const PointerEvents = $timeout => {
  * Define PointerEvents module.
  * @param {String} moduleName.
  * @param {Array} dependencies.
- * @export Module name - name of this module
+ * @export Module name - name of this module of Simply app
  */
-export default angular.module('Heloo.App.PointerEvents', []).directive('pointerEvents', PointerEvents).name;
+export default angular.module('Simply.App.PointerEvents', []).directive('pointerEvents', PointerEvents).name;
