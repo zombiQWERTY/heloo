@@ -93,16 +93,6 @@
         }
 
         input[type="submit"] {
-          background: $austronaut;
-          text-transform: uppercase;
-          border-radius: 5px;
-          padding: 13px 24px;
-          color: $white;
-          cursor: pointer;
-          display: block;
-          margin: 0 auto;
-          margin-top: 15px;
-
           @mixin mobile {
             font-size: 30px;
             background: $trueBlue;

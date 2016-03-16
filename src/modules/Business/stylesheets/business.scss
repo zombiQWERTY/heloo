@@ -1,14 +1,14 @@
 @import "../../../stylesheets/mixins.scss";
 @import "../../../stylesheets/variables.scss";
 
-.block_press_intro_about {
-  background: url(./images/press_bg.png) no-repeat center top;
-  background-size: cover;
-  min-height: 600px;
+.block_press_intro_about.block_business_intro {
+  background: url(./images/press_bg.png) no-repeat center top !important;
+  background-size: cover !important;
+  min-height: 600px !important;
 
   @mixin mobile {
-    background: url(./images/press_bg_mobile.png) no-repeat center top;
-    min-height: 1043px;
+    background: url(./images/press_bg_mobile.png) no-repeat center top !important;
+    min-height: 1043px !important;
   }
 }
 
@@ -164,3 +164,69 @@
     right: 0;
   }
 }
+
+.block_business_together {
+  padding-top: 30px;
+
+  &__heading {
+    padding-top: 50px;
+  }
+
+  &__slider {
+    position: relative;
+
+    &__arrow {
+      top: 55px
+    }
+
+    &__slides {
+      display: flex;
+      width: 810px;
+      margin: 0 auto;
+      justify-content: space-between;
+
+      &_speaks {
+        width: 880px;
+        margin: 0 auto;
+      }
+    }
+
+    &__slide {
+      width: 120px;
+      text-align: center;
+
+      &_speaks {
+        width: 410px;
+        display: flex;
+
+        &__descr {
+          width: 280px;
+          margin-left: 15px;
+          font-size: 14px;
+
+          &__name {
+            font-size: 16px;
+          }
+
+          &__post {
+            color: $doveGray;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      &__image {
+        margin-bottom: 20px;
+
+        img {
+          box-shadow: 0 0 10px 3px rgba($black, .1);
+        }
+      }
+
+      &__name {
+        color: $austronaut;
+      }
+    }
+  }
+}
+

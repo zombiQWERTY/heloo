@@ -1,0 +1,36 @@
+.block.block_business_together
+  .block_centered
+    a.button_default.button_default_widen(href="#") Демоверсия личного кабинета
+    .block_business_together__heading
+      h1.heading_default.heading_default_blue Уже с нами
+      hr.header-devider.header-devider_blue
+
+    .block_business_together__slider
+      .how-to-partner__arrow.block_business_together__slider__arrow.how-to-partner__arrow_prev
+      .how-to-partner__arrow.block_business_together__slider__arrow.how-to-partner__arrow_next
+      .block_business_together__slider__slides
+        .block_business_together__slider__slide(ng-repeat="slide in [1,2,3,4,5]")
+          .block_business_together__slider__slide__image
+            img(src="/business/partner/1.png")
+          .block_business_together__slider__slide__name Название
+
+    .block_business_together__heading
+      h1.heading_default.heading_default_blue О нас говорят
+      hr.header-devider.header-devider_blue
+
+    .block_business_together__slider
+      .how-to-partner__arrow.block_business_together__slider__arrow.how-to-partner__arrow_prev
+      .how-to-partner__arrow.block_business_together__slider__arrow.how-to-partner__arrow_next
+      .block_business_together__slider__slides.block_business_together__slider__slides_speaks
+        .block_business_together__slider__slide_speaks(ng-repeat="speaker in [1,2]")
+          .block_business_together__slider__slide_speaks__image
+            img(src="/business/speaks/1.png")
+          .block_business_together__slider__slide_speaks__descr
+            .block_business_together__slider__slide_speaks__descr__name Беслан Назаров
+            .block_business_together__slider__slide_speaks__descr__post Крупный бизнесмен
+            .block_business_together__slider__slide_speaks__descr__text.
+              Пара предложений текста, возможно,
+              затрагивающие приложение, а может
+              даже личную жизнь, известно лишь то,
+              что здесь может поместиться аж целых
+              6 строчек, а при желании и семь.<br />Вот так то!

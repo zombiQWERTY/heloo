@@ -1,34 +1,36 @@
-header.header
-  .menu(ng-if="!$root.breakpoint")
-    ul
-      li
-        a(href="/") Главная
-      li
-        a(href="/about") О Heloo
-      li
-        a(href="/business") Для бизнеса
-      li
-        a(href="/about") О нас
-      li
-        a(href="/press") Пресса
-      li
-        a(href="/contacts") Контакты
-      li
-        a.menu__cabinet(href="#") Личный кабинет
-  .menu_mobile(ng-if="$root.breakpoint")
-    .menu_mobile__sandwich(ng-init="openMenu = false", ng-click="openMenu = !openMenu")
-    ul(ng-if="openMenu")
-      li.menu_mobile__active
-        a(href="/") Главная
-      li
-        a(href="/about") О Heloo
-      li
-        a(href="/business") Для бизнеса
-      li
-        a(href="/about") О нас
-      li
-        a(href="/press") Пресса
-      li
-        a(href="/contacts") Контакты
-      li
-        a(href="#") Личный кабинет
+.header_replace
+header.header(sticky="")
+  .block_centered
+    .menu(ng-if="!$root.breakpoint")
+      ul
+        li
+          a(href="/", ng-class="Heloo.getClass('/')") Главная
+        li
+          a(href="/#aboutHeloo", ng-click="Heloo.scrollToAbout()") О Heloo
+        li
+          a(href="/business", ng-class="Heloo.getClass('/business')") Для бизнеса
+        li
+          a(href="/about", ng-class="Heloo.getClass('/about')") О нас
+        li
+          a(href="/press", ng-class="Heloo.getClass('/press')") Пресса
+        li
+          a(href="/contacts", ng-class="Heloo.getClass('/contacts')") Контакты
+        li
+          a.menu__cabinet(href="#") Личный кабинет
+    .menu_mobile(ng-if="$root.breakpoint")
+      .menu_mobile__sandwich(ng-init="openMenu = false", ng-click="openMenu = !openMenu")
+      ul(ng-if="openMenu")
+        li.menu_mobile__active
+          a(href="/", ng-class="Heloo.getClass('/')") Главная
+        li
+          a(href="/#aboutHeloo", ng-click="Heloo.scrollToAbout()") О Heloo
+        li
+          a(href="/business", ng-class="Heloo.getClass('/business')") Для бизнеса
+        li
+          a(href="/about", ng-class="Heloo.getClass('/about')") О нас
+        li
+          a(href="/press", ng-class="Heloo.getClass('/press')") Пресса
+        li
+          a(href="/contacts", ng-class="Heloo.getClass('/contacts')") Контакты
+        li
+          a(href="#") Личный кабинет

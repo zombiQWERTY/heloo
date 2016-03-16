@@ -3,6 +3,33 @@
 
 .header {
   padding-top: 22px;
+  background-color: transparent;
+  transition: background-color 300ms ease;
+  z-index: 1000;
+  position: relative;
+
+  &_replace {
+    height: 38px;
+    display: none;
+
+    @mixin mobile {
+      display: none !important;
+    }
+  }
+
+  &_fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: $white;
+    height: 60px;
+
+    @mixin mobile {
+      position: relative !important;
+      background-color: transparent !important;
+      height: auto !important;
+    }
+  }
 
   @mixin mobile {
     padding-top: 0;
@@ -19,6 +46,18 @@
     color: $platinum;
     font-size: 16px;
     font-family: $Roboto-font;
+
+    &.active {
+      color: $white;
+    }
+
+    .header_fixed & {
+      color: $nobel;
+    }
+
+    .header_fixed &.active {
+      color: $iris;
+    }
   }
 
   &__cabinet {
@@ -50,14 +89,14 @@
       a {
         font-size: 30px;
         font-family: $Roboto-font;
+
+        &.active {
+          font-weight: 700;
+        }
       }
 
       &:not(:last-child) {
         margin-bottom: 35px;
-      }
-
-      &.menu_mobile__active {
-        font-weight: 700;
       }
     }
   }

@@ -8,7 +8,6 @@ import AppView             from './modules/Heloo/views/layout.jade';
 
 import Controllers         from './modules/Heloo/Controllers';
 
-
 const appname = 'Heloo';  /** App and root module name */
 const deps    = [uiRouter, 'ui.router.stateHelper'];  /** All global dependencies */
 const modules = [Controllers];  /** All app dependencies */

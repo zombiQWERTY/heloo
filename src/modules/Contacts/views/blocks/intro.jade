@@ -1,6 +1,6 @@
 .block.block_contacts-intro
+  include ../.././../Heloo/subModules/Header/header.jade
   .block_centered
-    include ../.././../Heloo/subModules/Header/header.jade
     h1 Свяжитесь с нами
     .block_contacts-intro__form(
       ng-class="{'block_contacts-intro__form_desktop': !$root.breakpoint}")
@@ -14,7 +14,7 @@
           input(type="text", placeholder="Ваше имя")
           input(type="text", placeholder="Ваш e-mail")
           textarea(placeholder="Сообщение")
-          input(type="submit", valus="Отправить")
+          input.button_default(type="submit", value="Отправить")
       .block_contacts-intro__form__address.block_contacts-intro__form_desktop__address
         ul
           li Torstrasse 43 (10119) Berlin, Germany

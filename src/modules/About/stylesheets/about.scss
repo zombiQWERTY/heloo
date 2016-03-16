@@ -2,13 +2,13 @@
 @import "../../../stylesheets/variables.scss";
 
 .block_press_intro_about {
-  background: url(./images/intro_bg.png) no-repeat center top;
+  background: url(./images/intro_bg.png) no-repeat center top !important;
   background-size: cover;
-  min-height: 601px;
+  min-height: 601px !important;
 
   @mixin mobile {
-    background: url(./images/intro_bg_mobile.png) no-repeat center top;
-    min-height: 650px;
+    background: url(./images/intro_bg_mobile.png) no-repeat center top !important;
+    min-height: 650px !important;
   }
 }
 

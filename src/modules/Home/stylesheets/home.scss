@@ -24,6 +24,30 @@
     color: $white;
     background-color: $azureRadiance;
   }
+
+  &_default {
+    background: $austronaut;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 13px 24px;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+
+.heading_default {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  color: $black;
+
+  &_blue {
+    color: $austronaut;
+  }
 }
 
 .mobile-apps {
@@ -85,6 +109,10 @@
   background-color: $black;
   margin: 35px auto;
   size: 50px 2px;
+
+  &_blue {
+    background-color: $austronaut;
+  }
 }
 
 .block_intro {
@@ -201,13 +229,6 @@
 .block_business {
   padding-top: 85px;
   padding-bottom: 120px;
-
-  h1 {
-    text-align: center;
-    font-weight: 400;
-    font-size: 24px;
-    color: $black;
-  }
 
   &__benefits {
     display: flex;

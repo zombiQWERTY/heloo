@@ -1,5 +1,5 @@
-import angular   from 'angular';
-import FastClick from 'Fastclick';
+import angular      from 'angular';
+import FastClick    from 'Fastclick';
 
 /**
  * Enable all third-party scripts
@@ -9,7 +9,7 @@ const ThirdParties = () => {
   return {
     restrict: 'A',
     link() {
-      new FastClick(document.body);  /** Remove 300ms delay on touch devices */
+      new FastClick(document.body);
     }
   };
 };

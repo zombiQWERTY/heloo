@@ -8,6 +8,7 @@ import HelooController   from './controller/HelooCtrl';
 import PointerEvents     from './directives/PointerEvents/PointerEventsDirective';
 import ThirdParties      from './directives/ThirdParties/ThirdPartiesDirective';
 import ResponsiveClasses from './directives/ResponsiveClasses/ResponsiveClassesDirective';
+import Sticky            from './directives/Sticky/StickyDirective';
 
 /*
  * Stylesheets
@@ -44,5 +45,5 @@ import './stylesheets/layout.scss';
  * @export Module name - name of root module
  */
 export default angular.module('Heloo.App', [
-  PointerEvents, ResponsiveClasses, ThirdParties
+  PointerEvents, ResponsiveClasses, ThirdParties, Sticky
 ]).controller('HelooController', HelooController).name;
